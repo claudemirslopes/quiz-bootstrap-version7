@@ -1,0 +1,12 @@
+#quizTable, #quizTable th, #quizTable td {
+    font-size: 0.80rem;
+}
+#quizTable .btn {
+    font-size: 0.80rem;
+    padding: 0.15rem 0.35rem;
+    line-height: 1;
+}
+#quizTable .fa-solid {
+    font-size: 1em;
+}
+.btn-editar { display: none !important; }

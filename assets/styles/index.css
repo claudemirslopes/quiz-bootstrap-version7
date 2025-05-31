@@ -1,0 +1,23 @@
+body { background: #f8f9fa; }
+.header-logo { max-height: 80px; }
+.hero-img { max-width: 350px; width: 100%; border-radius: 1rem; box-shadow: 0 0 20px #0001; }
+.hero-section { text-align: center; padding: 3rem 0; }
+.btn-quiz { font-size: 1.3rem; padding: 0.35rem 2.5rem; }
+.hr-gradient {
+    border: none;
+    height: 4px;
+    width: 420px;
+    max-width: 90vw;
+    margin: 18px auto 28px auto;
+    background: linear-gradient(90deg, #0072ff 0%, #ffd700 33%, #ff0000 50%, #ff9900 66%, #a259c4 80%, #ffffff 100%);
+    border-radius: 2px;
+}
+@media (max-width: 500px) {
+    .hr-gradient { width: 90vw; }
+}
+@media (max-width: 600px) {
+    .quiz-instrucoes-mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

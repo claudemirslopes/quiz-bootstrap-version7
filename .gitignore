@@ -1,0 +1,13 @@
+# Ignorar arquivos sensíveis e desnecessários
+.env
+quiz_dons.sql
+# Arquivo de configuração de exemplo pode ser enviado
+!.env.bkp
+# Ignorar arquivos temporários, cache e sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+# Ignorar pastas de IDE/editor
+.vscode/
+.idea/
