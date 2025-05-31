@@ -3,6 +3,7 @@
 Sistema web em PHP + Bootstrap para aplicação de teste de dons espirituais, com fluxo de identificação, quiz paginado, validação, salvamento em MySQL, envio de resultado por e-mail, CRUD, exportação, layout responsivo e centralização de configurações sensíveis em `.env`.
 
 ## Funcionalidades
+
 - Identificação do usuário (nome e e-mail) com validação
 - Quiz paginado (10 perguntas por página, 72 no total)
 - Validação customizada das respostas
@@ -17,7 +18,8 @@ Sistema web em PHP + Bootstrap para aplicação de teste de dons espirituais, co
 - CSS e JS externos organizados por página
 
 ## Estrutura de Pastas
-```
+
+```plaintext
 quiz-bootstrap/
 ├── assets/
 │   ├── images/
@@ -40,15 +42,20 @@ quiz-bootstrap/
 ```
 
 ## Instalação
+
 1. **Clone o repositório:**
-   ```
+
+   ```bash
    git clone https://github.com/claudemirslopes/quiz-bootstrap-v7.git
    ```
+
 2. **Crie o banco de dados:**
    - Importe o arquivo `quiz_dons.sql` (não incluso no repositório, solicite ao responsável ou utilize o modelo em `.env.bkp`).
+
 3. **Configure o ambiente:**
    - Renomeie `.env.bkp` para `.env` e preencha com seus dados de conexão e e-mail:
-     ```
+
+     ```ini
      DB_HOST=localhost
      DB_NAME=seubanco
      DB_USER=usuario
@@ -57,11 +64,13 @@ quiz-bootstrap/
      MAIL_FROM=seu@email.com
      MAIL_FROM_NAME=Seu Nome
      ```
+
 4. **Ajuste permissões se necessário**
 5. **Acesse via navegador:**
    - Exemplo: `http://localhost/quiz-bootstrap/index.php`
 
 ## Variáveis de Ambiente (`.env`)
+
 - **DB_HOST**: Host do banco de dados
 - **DB_NAME**: Nome do banco de dados
 - **DB_USER**: Usuário do banco
@@ -73,21 +82,26 @@ quiz-bootstrap/
 > **Nunca envie o arquivo `.env` para o repositório. Use apenas `.env.bkp` como modelo.**
 
 ## Exportação e Backup
+
 - Os dados podem ser exportados via DataTables (Excel, PDF, imprimir, copiar)
 - O arquivo `.sql` do banco não é enviado ao repositório por segurança
 
 ## Segurança
+
 - Todas as configurações sensíveis estão centralizadas no `.env`
 - Validação reforçada para impedir registros sem nome/e-mail
 - Recomenda-se utilizar HTTPS em produção
 
 ## Customização
+
 - Para personalizar logo, título ou outros textos, edite o arquivo `templates/header.php` ou adicione variáveis ao `.env` conforme desejado
 
 ## Licença
+
 Projeto de uso livre para fins ministeriais e educacionais. Para uso comercial, consulte o autor.
 
 ## Autor
+
 Projeto criado por Claudemir da Silva Lopes para uso na Igreja Batista Atitude da Zona Sul do Rio de Janeiro.
 
 ---
