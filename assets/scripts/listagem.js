@@ -4,7 +4,10 @@ $(document).ready(function() {
             url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json'
         },
         dom: 'Bfrtip',
-        order: [[2, 'desc']], // Agora a coluna Data é a 3ª (índice 2)
+        order: [[0, 'desc']], // Ordena pela coluna ID (mesmo oculta)
+        columnDefs: [
+            { targets: 0, visible: false, searchable: false } // Garante que a coluna ID está oculta mas disponível para ordenação
+        ],
         buttons: [
             {
                 extend: 'copyHtml5',

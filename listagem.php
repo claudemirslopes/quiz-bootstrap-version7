@@ -4,7 +4,7 @@ require_once __DIR__ . '/config/config.php';
 // Página para listar todos os registros do quiz com paginação usando DataTables
 
 $db = getDb();
-$registros = $db->query("SELECT * FROM quiz_respostas ORDER BY data_envio DESC")->fetchAll();
+$registros = $db->query("SELECT * FROM quiz_respostas ORDER BY id DESC")->fetchAll();
 
 ?><!DOCTYPE html>
 <html lang="pt-br">
@@ -16,6 +16,9 @@ $registros = $db->query("SELECT * FROM quiz_respostas ORDER BY data_envio DESC")
     <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://igrejaatitudezonasul.com.br/wp-content/uploads/2025/04/favicon_01-100x100.png" sizes="32x32" />
+    <link rel="icon" href="https://igrejaatitudezonasul.com.br/wp-content/uploads/2025/04/favicon_01.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://igrejaatitudezonasul.com.br/wp-content/uploads/2025/04/favicon_01.png" />
     <link href="assets/styles/listagem.css" rel="stylesheet">
 </head>
 <body>
@@ -28,7 +31,7 @@ $registros = $db->query("SELECT * FROM quiz_respostas ORDER BY data_envio DESC")
                 <table id="quizTable" class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <!-- <th>ID</th> -->
+                            <th class="d-none">ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
                             <th>Data</th>
@@ -44,7 +47,7 @@ $registros = $db->query("SELECT * FROM quiz_respostas ORDER BY data_envio DESC")
                     <tbody>
                         <?php foreach ($registros as $r): ?>
                         <tr>
-                            <!-- <td><?= $r['id'] ?></td> -->
+                            <td class="d-none"><?= $r['id'] ?></td>
                             <td><?= htmlspecialchars($r['nome']) ?></td>
                             <td><?= htmlspecialchars($r['email']) ?></td>
                             <td><?= date('d/m/Y H:i', strtotime($r['data_envio'])) ?></td>
